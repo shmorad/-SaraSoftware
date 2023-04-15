@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $tests = Category::with(['products'])->orderBy('id','desc')->get();
-        return view('home',compact('tests'));
+        $categories = Category::with(['products'])->orderBy('id','desc')->get();
+        return view('home',compact('categories'));
     }
     public function products(){
         $tests = Category::with(['products'])->get();

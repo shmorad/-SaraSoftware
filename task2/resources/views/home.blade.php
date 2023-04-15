@@ -76,18 +76,18 @@
    
     <!-- End catagories -->
 <!-- Start Mobile-card section -->
-@foreach ($tests as $test)
+@foreach ($categories as $category)
 <div class="container bg-color">
     <div class="row mb-5 pt-3">
         <div class="col-6">
-            <h1 class="p-3">{{ $test->category_name }}</h1>
+            <h1 class="p-3">{{ $category->category_name }}</h1>
         </div>
         <div class="col-6 text-end pr-3">
             <h5 class="text-warning font-weight-bold">See All</h5>
         </div>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        @foreach ($test->products as $allPro)
+        @foreach ($category->products as $allPro)
         <div class="col">
             <div class="card card-shadow h-100 card">
                 <img class="card-img-top" src="{{ asset('uploads/product/'.$allPro->product_image) }}" class="card-img-top" alt="...">
